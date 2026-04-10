@@ -39,3 +39,13 @@ For example, cleaning is useful before:
 - **Topic analysis**: normalized text helps reveal clearer themes.
 
 In short, text cleaning is a strong first step for almost every NLP pipeline.
+
+
+### Lesson 2 note: token output format
+
+In `outputs/tokenized_news.csv`, the `tokens` column is saved as **list-like text** because CSV files store plain text values.
+For example, one row may look like:
+
+- `['stocks', 'rose', 'investors', 'reacted']`
+
+This is normal for beginner workflows. Later, you can convert this text back to a Python list when needed.

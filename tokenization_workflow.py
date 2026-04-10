@@ -51,6 +51,10 @@ def main() -> None:
     # 3) Create a new tokens column from clean_text
     df["tokens"] = df["clean_text"].apply(lambda text: tokenize_without_stopwords(text, stop_words))
 
+    # 4) Count how many tokens each article has
+    df["token_count"] = df["tokens"].apply(len)
+
+    # 5) Save the tokenized output for the next lesson
     # 4) Save the tokenized output for the next lesson
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUTPUT_PATH, index=False)
@@ -58,6 +62,7 @@ def main() -> None:
     print("Tokenization complete.")
     print(f"Input file: {INPUT_PATH}")
     print(f"Output file: {OUTPUT_PATH}")
+    print(df[["id", "clean_text", "tokens", "token_count"]].head())
     print(df[["id", "clean_text", "tokens"]].head())
 
 
