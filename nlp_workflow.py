@@ -7,6 +7,7 @@ import pandas as pd
 
 
 DATA_PATH = Path("data/sample_news.csv")
+OUTPUT_PATH = Path("outputs/cleaned_news.csv")
 
 
 def clean_text(text: str) -> str:
@@ -51,6 +52,11 @@ def main() -> None:
 
     print("Updated dataset with article_length and clean_text:")
     print(df[["id", "title", "article_length", "clean_text"]])
+
+    # 5) Save the processed DataFrame for later use
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(OUTPUT_PATH, index=False)
+    print(f"\nSaved processed data to: {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
