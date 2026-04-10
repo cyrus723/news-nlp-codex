@@ -1,0 +1,4 @@
+id,title,date,source,text,article_length,clean_text,tokens,token_count
+1,Market rally continues,2025-01-05,Daily News,Stocks rose after investors reacted positively to inflation data.,9,stocks rose after investors reacted positively to inflation data,"['stocks', 'rose', 'after', 'investors', 'reacted', 'positively', 'inflation', 'data']",8
+2,Debate intensifies,2025-01-06,Global Times,Candidates exchanged criticism during the national election debate.,8,candidates exchanged criticism during the national election debate,"['candidates', 'exchanged', 'criticism', 'during', 'national', 'election', 'debate']",7
+3,Local team wins final,2025-01-07,Sports Post,The home team secured the championship after a dramatic late goal.,11,the home team secured the championship after a dramatic late goal,"['home', 'team', 'secured', 'championship', 'after', 'dramatic', 'late', 'goal']",8
